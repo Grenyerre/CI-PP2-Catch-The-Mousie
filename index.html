@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="assets/images/favicon/site.webmanifest">
+    <title>Catch The Mousie Game</title>
+</head>
+
+<body>
+    <!--Header-->
+    <header>
+        <h1>Catch The Mousie!</h1>
+    </header>
+
+    <!--Gam play area-->
+
+    <main class="game-area">
+
+        <!--modal instructions box-->
+
+        <aside class="modal">
+            <div class="modal-content">
+                <h2>This is Takeshi's Castle</h2>
+                <p>The object of the game is simple. <br> Take a run at a door of your choosing. Two of the doors are
+                    made of wood (ouch) and one is made of paper. <br> Smash through the paper to make it to the next
+                    round. <br>Get lucky 3 times in a row and you are one step closer to storming Takeshi's castle!
+                </p>
+                <button class="close-button">Lets Play!</button>
+            </div>
+        </aside>
+
+        <!--Settings Section-->
+
+        <section class="game-settings">
+            <button class="settings-btn" id="music-button">Play Music</button>
+            <button class="settings-btn" id="modal-button">Instructions</button>
+            <button class="settings-btn" id="reset-button">Reset</button>
+        </section>
+
+        <section class="main-game-image">
+            <img id="main-game-image" src="assets/images/main-image.webp" alt="drawing of the 3 doors">
+            <img id="winning-image" src="assets/images/winning-image.webp" alt="Winning Image" class="image-style"
+                style="display: none;">
+        </section>
+
+        <section class="score-area">
+            <h2>Score: <span id="user-score">0</span></h2>
+        </section>
+
+        <!-- Game Prompts -->
+        <h3><span id="gameState">Pick a door and RUN!!</span></h3>
+
+        <section class="controls">
+            <button class="control-button" id="left">Left</button>
+            <button class="control-button" id="middle">Middle</button>
+            <button class="control-button" id="right">Right</button>
+            <button id="play-again-button" style="display:none">Play Again</button>
+        </section>
+
+    </main>
+    <audio id="audio" src="assets/music/theme-song.mp3" loop></audio>
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
