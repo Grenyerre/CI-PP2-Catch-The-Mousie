@@ -18,53 +18,49 @@
         <h1>Catch The Mousie!</h1>
     </header>
 
-    <!--Gam play area-->
-
+    <!--Game play area-->
     <main class="game-area">
 
-        <!--modal instructions box-->
-
+        <!--Modal box: Game Instructions-->
         <aside class="modal">
             <div class="modal-content">
-                <h2>This is Takeshi's Castle</h2>
-                <p>The object of the game is simple. <br> Take a run at a door of your choosing. Two of the doors are
-                    made of wood (ouch) and one is made of paper. <br> Smash through the paper to make it to the next
-                    round. <br>Get lucky 3 times in a row and you are one step closer to storming Takeshi's castle!
+                <h2>Welcome to Catch The Mousie!</h2>
+                <p>You are a hungry cat.
+                    <br>The 5 mice you are so desperate to eat can escape through one of 3 holes.
+                    <br>From which hole do you think each mouse will escape.
+                    <br>Choose carefully.
                 </p>
-                <button class="close-button">Lets Play!</button>
+                <button class="close-button">Lets Eat!</button>
             </div>
         </aside>
 
         <!--Settings Section-->
-
         <section class="game-settings">
-            <button class="settings-btn" id="music-button">Play Music</button>
-            <button class="settings-btn" id="modal-button">Instructions</button>
-            <button class="settings-btn" id="reset-button">Reset</button>
+            <button class="settings-button" id="modal-button">Instructions</button>
+            <button class="settings-button" id="musicfx-button">Music & FX</button>
+            <button class="settings-button" id="restart-button">Restart</button>
         </section>
 
-        <section class="main-game-image">
-            <img id="main-game-image" src="assets/images/main-image.webp" alt="drawing of the 3 doors">
-            <img id="winning-image" src="assets/images/winning-image.webp" alt="Winning Image" class="image-style"
-                style="display: none;">
+        <section class="initial-game-image">
+            <img id="main-game-image" src="assets/images/initial-game-image.webp"
+                alt="cat sat infront of three small holes in the ground">
         </section>
 
         <section class="score-area">
-            <h2>Score: <span id="user-score">0</span></h2>
+            <h2>Eaten: <span id="user-score">0</span>Escaped: <span id="cpu-score"></span></h2>
         </section>
 
         <!-- Game Prompts -->
-        <h3><span id="gameState">Pick a door and RUN!!</span></h3>
+        <h3><span id="gameState">Choose a hole and pounce!</span></h3>
 
         <section class="controls">
             <button class="control-button" id="left">Left</button>
             <button class="control-button" id="middle">Middle</button>
             <button class="control-button" id="right">Right</button>
-            <button id="play-again-button" style="display:none">Play Again</button>
         </section>
 
     </main>
-    <audio id="audio" src="assets/music/theme-song.mp3" loop></audio>
+    <!--<audio id="audio" src="assets/music/theme-song.mp3" loop></audio>-->
     <script src="assets/js/script.js"></script>
 </body>
 
