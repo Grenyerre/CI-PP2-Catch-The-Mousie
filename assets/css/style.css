@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Englebert&display=swap');
 
+header {
+    font-size: 16px;
+}
+
 body {
     font-family: Englebert, sans-serif;
     background-color: #d467f0;
@@ -9,13 +13,10 @@ body {
 h1 {
     color: #fff;
     margin-bottom: 10px;
-    font-size: 1.7em;
+    font-size: 3em;
     margin-top: 10px;
     text-align: center;
-}
-
-header {
-    font-size: 5vh;
+    text-shadow: 3px 3px #482352;
 }
 
 .settings-button {
