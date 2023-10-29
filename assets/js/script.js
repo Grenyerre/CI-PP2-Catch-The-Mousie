@@ -45,17 +45,14 @@ window.addEventListener("click", (e) => {
     }
 });
 
-/**
- * Reset button
- */
+/* Reset button */
 resetButton.addEventListener("click", () => {
     location.reload();
 });
 
 
 /**
- * Take the user's direction choice and assign the value to player
- * and call the computer choice function
+ * Take the player's chosen direction and call the computer choice function
  */
 controlButtons.forEach(button => button.addEventListener("click", () => {
     userDirection = button.textContent;
@@ -91,8 +88,7 @@ function checkOutcome() {
 
     let outcome = "";
 
-    const userPlayImg = `assets/images/user-${userDirection}-cpu-${cpuDirection}.png`;
-    const cpuPlayImg = `assets/images/cpu-${cpuDirection}-user-${userDirection}.png`;
+    const userPlayImg = `assets/images/cat_${catDirection}_mouse_${mouseDirection}.png`;
 
     if (kicker === userKicker) {
         if (userDirection === cpuDirection) {
@@ -104,42 +100,11 @@ function checkOutcome() {
             outcome = `You kicked ${userDirection} and CPU dived ${cpuDirection}. GOAL!`;
             userScore.innerHTML = userGoals;
         }
-    } else if (kicker === cpuKicker) {
-        if (cpuDirection === userDirection) {
-            gameImg.src = cpuPlayImg;
-            outcome = `CPU kicked ${cpuDirection} and You dived ${userDirection}. SAVED!`;
-        } else {
-            cpuGoals++;
-            gameImg.src = cpuPlayImg;
-            outcome = `CPU kicked ${cpuDirection} and You dived ${userDirection}. GOAL!`;
-            cpuScore.innerHTML = cpuGoals;
-        }
     }
     document.getElementById("left").disabled = true;
     document.getElementById("middle").disabled = true;
     document.getElementById("right").disabled = true;
     return outcome;
-}
-
-/**
- * Change kicker after each turn
- */
-function changeKicker() {
-    if (kicker === userKicker) {
-        kicker = cpuKicker;
-        document.getElementById("left").disabled = false;
-        document.getElementById("middle").disabled = false;
-        document.getElementById("right").disabled = false;
-        gameState.innerHTML = "It's your turn to save";
-        gameImg.src = "assets/images/cpu-ready.png";
-    } else if (kicker === cpuKicker) {
-        kicker = userKicker;
-        document.getElementById("left").disabled = false;
-        document.getElementById("middle").disabled = false;
-        document.getElementById("right").disabled = false;
-        gameState.innerHTML = "It's your turn to kick";
-        gameImg.src = "assets/images/user-ready.png";
-    }
 }
 
 /**
