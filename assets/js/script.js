@@ -45,7 +45,7 @@ window.addEventListener("click", (e) => {
 });
 
 /* Reset button */
-resetButton.addEventListener("click", () => {
+restartButton.addEventListener("click", () => {
     location.reload();
 });
 
@@ -88,13 +88,15 @@ function checkOutcome() {
     const userPlayImg = `assets/images/cat_${catDirection}_mouse_${mouseLocation}.png`;
 
     if (catDirection === mouseLocation) {
+        eaten++;
         gameImg.src = userPlayImg;
         outcome = `You pounced ${catDirection} and the mouse chose ${mouseLocation}. Yum yum!`;
-        eaten++;
+        playerScore.innerHTML = eaten;
     } else {
+        escaped++;
         gameImg.src = userPlayImg;
         outcome = `You pounced ${catDirection} and mouse chose ${mouseLocation}. Better luck next time!`;
-        escaped++;
+        computerScore.innerHTML = escaped;
     }
 }
 document.getElementById("left").disabled = true;
@@ -108,12 +110,12 @@ function checkGameEnd() {
         gameState.innerHTML = `I'm still hungry ${username}, feed me.`;
         const userPlayImg = "assets/images/cat_still_hungry.png";
         setTimeout(endGame, 3000);
-    } else if (eaten >= 2 && eaten <=4 && escaped ) {
+    } else if (eaten >= 2 && eaten <= 4 && escaped) {
         gameState.innerHTML = `Well done ${username}, I'm almost full.`;
         const userPlayImg = "assets/images/cat_loaf.png";
         setTimeout(endGame, 3000);
     } else {
-        gameState,innerHTML = `Amazing ${username}, I have achieved satiety.`
+        gameState, innerHTML = `Amazing ${username}, I have achieved satiety.`;
         const userPlayImg = "assets/images/cat_eats_mouse.png";
         setTimeout(endGame, 3000);
     }
