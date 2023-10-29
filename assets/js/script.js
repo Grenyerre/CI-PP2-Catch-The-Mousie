@@ -13,7 +13,7 @@ let gameImg = document.getElementById("game-image");
 let modalButton = document.getElementById("modal-button");
 let modal = document.querySelector(".modal");
 let closeButton = document.querySelector(".close-button");
-let resetButton = document.getElementById("reset-button");
+let restartButton = document.getElementById("restart-button");
 
 /* Music & FX settings*/
 musicButton.addEventListener("click", () => {
@@ -60,9 +60,7 @@ controlButtons.forEach(button => button.addEventListener("click", () => {
     checkGameEnd();
 }));
 
-/**
- * Generate random number to determine from which hole the mouse appears.
- */
+/* Generate random number to determine from which hole the mouse appears. */
 function generateMouseLocation() {
     const computerChoice = Math.floor(Math.random() * 3);
 
@@ -89,14 +87,14 @@ function checkOutcome() {
 
     const userPlayImg = `assets/images/cat_${catDirection}_mouse_${mouseLocation}.png`;
 
-    if (userDirection === cpuDirection) {
+    if (catDirection === mouseLocation) {
         gameImg.src = userPlayImg;
-        outcome = `You pounced ${catDirection} and the mouse chose ${mouseLocation}. SAVED!`;
+        outcome = `You pounced ${catDirection} and the mouse chose ${mouseLocation}. Yum yum!`;
+        eaten++;
     } else {
-        userGoals++;
         gameImg.src = userPlayImg;
-        outcome = `You kicked ${catDirection} and CPU dived ${mouseLocation}. GOAL!`;
-        userScore.innerHTML = userGoals;
+        outcome = `You pounced ${catDirection} and mouse chose ${mouseLocation}. Better luck next time!`;
+        escaped++;
     }
 }
 document.getElementById("left").disabled = true;
@@ -104,26 +102,28 @@ document.getElementById("middle").disabled = true;
 document.getElementById("right").disabled = true;
 return outcome;
 
-/**
- * Check if either player or CPU have reached 5 goals
- */
+/* Check whether 5 attempts have been made. */
 function checkGameEnd() {
-    if (userGoals === 5 && cpuGoals < 5) {
-        gameState.innerHTML = "YOU WIN!";
-        endGame();
-    } else if (userGoals < 5 && cpuGoals === 5) {
-        gameState.innerHTML = "COMPUTER WINS!";
-        endGame();
+    if (eaten < 2) {
+        gameState.innerHTML = `I'm still hungry ${username}, feed me.`;
+        const userPlayImg = "assets/images/cat_still_hungry.png";
+        setTimeout(endGame, 3000);
+    } else if (eaten >= 2 && eaten <=4 && escaped ) {
+        gameState.innerHTML = `Well done ${username}, I'm almost full.`;
+        const userPlayImg = "assets/images/cat_loaf.png";
+        setTimeout(endGame, 3000);
     } else {
-        setTimeout(changeKicker, 2500);
+        gameState,innerHTML = `Amazing ${username}, I have achieved satiety.`
+        const userPlayImg = "assets/images/cat_eats_mouse.png";
+        setTimeout(endGame, 3000);
     }
 }
 
 /**
- * Disable direction buttons if either user or cpu reach 5 goals
+ * Disable direction buttons when 5 mice have been released.
  */
 function endGame() {
     document.getElementById("left").disabled = true;
-    document.getElementById("middle").disabled = true;
+    document.getElementById("centre").disabled = true;
     document.getElementById("right").disabled = true;
 }
