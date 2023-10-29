@@ -80,7 +80,7 @@ header {
     color: #fff;
 }
 
-.initial-game-image img {
+.game-image {
     width: auto;
     max-width: 70%;
     height: 600px;

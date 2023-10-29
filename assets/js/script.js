@@ -6,10 +6,9 @@ const musicButton = document.getElementById('music-button');
 const audio = document.querySelector("audio");
 
 let catDirection;
-let mouseDirection;
+let mouseLocation;
 let eaten = 0;
 let escaped = 0;
-/*let kicker = userKicker;*/
 let gameImg = document.getElementById("game-image");
 let modalButton = document.getElementById("modal-button");
 let modal = document.querySelector(".modal");
@@ -88,24 +87,22 @@ function checkOutcome() {
 
     let outcome = "";
 
-    const userPlayImg = `assets/images/cat_${catDirection}_mouse_${mouseDirection}.png`;
+    const userPlayImg = `assets/images/cat_${catDirection}_mouse_${mouseLocation}.png`;
 
-    if (kicker === userKicker) {
-        if (userDirection === cpuDirection) {
-            gameImg.src = userPlayImg;
-            outcome = `You kicked ${userDirection} and CPU dived ${cpuDirection}. SAVED!`;
-        } else {
-            userGoals++;
-            gameImg.src = userPlayImg;
-            outcome = `You kicked ${userDirection} and CPU dived ${cpuDirection}. GOAL!`;
-            userScore.innerHTML = userGoals;
-        }
+    if (userDirection === cpuDirection) {
+        gameImg.src = userPlayImg;
+        outcome = `You pounced ${catDirection} and the mouse chose ${mouseLocation}. SAVED!`;
+    } else {
+        userGoals++;
+        gameImg.src = userPlayImg;
+        outcome = `You kicked ${catDirection} and CPU dived ${mouseLocation}. GOAL!`;
+        userScore.innerHTML = userGoals;
     }
-    document.getElementById("left").disabled = true;
-    document.getElementById("middle").disabled = true;
-    document.getElementById("right").disabled = true;
-    return outcome;
 }
+document.getElementById("left").disabled = true;
+document.getElementById("middle").disabled = true;
+document.getElementById("right").disabled = true;
+return outcome;
 
 /**
  * Check if either player or CPU have reached 5 goals
