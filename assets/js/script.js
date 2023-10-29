@@ -54,7 +54,7 @@ resetButton.addEventListener("click", () => {
  * Take the player's chosen direction and call the computer choice function
  */
 controlButtons.forEach(button => button.addEventListener("click", () => {
-    userDirection = button.textContent;
+    catDirection = button.textContent;
     generateMouseLocation();
     gameState.textContent = checkOutcome();
     checkGameEnd();
@@ -71,7 +71,7 @@ function generateMouseLocation() {
             mouseLocation = 'left';
             break;
         case 1:
-            mouseLocation = 'middle';
+            mouseLocation = 'centre';
             break;
         case 2:
             mouseLocation = 'right';
@@ -80,8 +80,8 @@ function generateMouseLocation() {
 }
 
 /**
- * Check both user and cpu choices and determine if it's a goal or a save
- * change main image to reflect outcome and add result to scoreboard
+ * Check both player and computer choices and determine whether the mouse
+ * escaped or was eaten. Alter game image accordingly and increment relevant score.
  */
 function checkOutcome() {
 
