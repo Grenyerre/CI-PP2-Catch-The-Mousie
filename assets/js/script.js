@@ -1,34 +1,30 @@
-/* jshint esversion: 11 */
 const controlButtons = document.querySelectorAll(".control-button");
 const gameState = document.querySelector("#gameState");
-const userScore = document.getElementById('user-score');
-const cpuScore = document.getElementById('cpu-score');
+const playerScore = document.getElementById('player-score');
+const computerScore = document.getElementById('computer-score');
 const musicButton = document.getElementById('music-button');
 const audio = document.querySelector("audio");
-let userKicker = 0;
-let cpuKicker = 1;
-let userDirection;
-let cpuDirection;
-let userGoals = 0;
-let cpuGoals = 0;
-let kicker = userKicker;
+
+let catDirection;
+let mouseDirection;
+let eaten = 0;
+let escaped = 0;
+/*let kicker = userKicker;*/
 let gameImg = document.getElementById("game-image");
 let modalButton = document.getElementById("modal-button");
 let modal = document.querySelector(".modal");
 let closeButton = document.querySelector(".close-button");
 let resetButton = document.getElementById("reset-button");
 
-/**
- * Music control settings
- */
+/* Music & FX settings*/
 musicButton.addEventListener("click", () => {
     if (audio.paused) {
         audio.volume = 0.2;
         audio.play();
-        musicButton.innerHTML = "Stop Music";
+        musicButton.innerHTML = "Mute Music & FX";
     } else {
         audio.pause();
-        musicButton.innerHTML = "Play Music";
+        musicButton.innerHTML = "Play Music & FX";
     }
 });
 
@@ -63,26 +59,26 @@ resetButton.addEventListener("click", () => {
  */
 controlButtons.forEach(button => button.addEventListener("click", () => {
     userDirection = button.textContent;
-    generateCpuDirection();
+    generateMouseLocation();
     gameState.textContent = checkOutcome();
-    checkWinner();
+    checkGameEnd();
 }));
 
 /**
- * Generate random number to determine what way the CPU shoots/dives
+ * Generate random number to determine from which hole the mouse appears.
  */
-function generateCpuDirection() {
-    const cpuChoice = Math.floor(Math.random() * 3 + 1);
+function generateMouseLocation() {
+    const computerChoice = Math.floor(Math.random() * 3);
 
-    switch (cpuChoice) {
+    switch (computerChoice) {
+        case 0:
+            mouseLocation = 'left';
+            break;
         case 1:
-            cpuDirection = 'left';
+            mouseLocation = 'middle';
             break;
         case 2:
-            cpuDirection = 'middle';
-            break;
-        case 3:
-            cpuDirection = 'right';
+            mouseLocation = 'right';
             break;
     }
 }
@@ -149,7 +145,7 @@ function changeKicker() {
 /**
  * Check if either player or CPU have reached 5 goals
  */
-function checkWinner() {
+function checkGameEnd() {
     if (userGoals === 5 && cpuGoals < 5) {
         gameState.innerHTML = "YOU WIN!";
         endGame();
