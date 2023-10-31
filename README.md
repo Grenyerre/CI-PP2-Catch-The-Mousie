@@ -77,3 +77,35 @@ These allow the player to input their choice of which hole they believe the mous
 
 Boiler plate referring to the site's author.
 
+## **Ideas In Development**
+
++ Increase the number of holes from which the mouse can escape to five. Probability: 70%.
++ To separate the music and sound effects so that they can be toggled on/off independently. Probability: 50%.
++ Alter the game graphics to allow the user to choose the cat's colouring; black, tortoiseshell, ginger, grey. Probability: 10%.
+
+## **Software Used**
+
+Below is a list of the software/applications used in the construction of this project.
++ [HTML5](https://en.wikipedia.org/wiki/HTML5)
+  + Used to create the structure of the webpage.
++ [CSS3](https://en.wikipedia.org/wiki/CSS)
+  + Used to style the content of the webpage.
++ [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
+  + Used to implement functionality in the game.
++ [GitHub](https://github.com/)
+  + Used to store and manage the project's code.
++ [Codeanywhere](https://app.codeanywhere.com/)
+  + Used as the project's Independent Development Environment (IDE).
++ [Google Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools)
+  + Used in the testing and debugging process.
++ [W3C Markup Validation Service](https://validator.w3.org/)
+  + Used to validate the project's HTML code.
++ [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/)
+  + Used to validate the project's CSS code.
++ [JSHint](https:..jshint.com/)
+  + Used to validate the project's JavaScript code.
++ [MicroSoft Paint](https://microsoft.com > en-us > windows > paint)
+  + Used to create the game's images.
++ [Webaim.](https://webaim.org/resources/contrastchecker/)
+  + Used to check colour scheme for readability.
+
