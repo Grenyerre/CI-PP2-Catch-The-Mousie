@@ -1,5 +1,5 @@
-const controlButtons = document.querySelectorAll(".control-button");
-const gameState = document.querySelector("#gameState");
+const controlButtons = document.querySelectorAll("control-button");
+const gameState = document.querySelector("gameState");
 const playerScore = document.getElementById('player-score');
 const computerScore = document.getElementById('computer-score');
 const musicButton = document.getElementById('music-button');
@@ -10,13 +10,13 @@ let mouseLocation;
 let eaten = 0;
 let escaped = 0;
 let gameImg = document.getElementById("game-image");
-let modalButton = document.getElementById("modal-button");
-let modal = document.querySelector(".modal");
-let closeButton = document.querySelector(".close-button");
+let instructionsButton = document.getElementById("instructions-button");
+let instructionsBox = document.querySelector("instructions-box");
+let closeInstructionsButton = document.querySelector("close-instructions-button");
 let restartButton = document.getElementById("restart-button");
 
 /* Music & FX settings*/
-musicButton.addEventListener("click", () => {
+musicButton.addEventListener("click", function () {
     if (audio.paused) {
         audio.volume = 0.2;
         audio.play();
@@ -27,33 +27,29 @@ musicButton.addEventListener("click", () => {
     }
 });
 
-/**
- * Modal box settings
- */
-modalButton.addEventListener("click", () => {
-    modal.style.display = "block";
+/** Modal box settings */
+instructionsButton.addEventListener("click", function () {
+    instructionsBox.style.display = "block";
 });
 
-closeButton.addEventListener("click", () => {
-    modal.style.display = "none";
+closeInstructionsButton.addEventListener("click", function () {
+    instructionsBox.style.display = "none";
 });
 
-window.addEventListener("click", (e) => {
-    if (e.target == modal) {
-        modal.style.display = "none";
+window.addEventListener("click", function (e) {
+    if (e.target == instructionsBox) {
+        instructionsBox.style.display = "none";
     }
 });
 
 /* Reset button */
-restartButton.addEventListener("click", () => {
+restartButton.addEventListener("click", function () {
     location.reload();
 });
 
 
-/**
- * Take the player's chosen direction and call the computer choice function
- */
-controlButtons.forEach(button => button.addEventListener("click", () => {
+/* Take the player's chosen direction and call the computer choice function */
+controlButtons.forEach(button => button.addEventListener("click", function () {
     catDirection = button.textContent;
     generateMouseLocation();
     gameState.textContent = checkOutcome();
@@ -115,15 +111,13 @@ function checkGameEnd() {
         const userPlayImg = "assets/images/cat_loaf.png";
         setTimeout(endGame, 3000);
     } else {
-        gameState, innerHTML = `Amazing ${username}, I have achieved satiety.`;
+        gameState.innerHTML = `Amazing ${username}, I have achieved satiety.`;
         const userPlayImg = "assets/images/cat_eats_mouse.png";
         setTimeout(endGame, 3000);
     }
 }
 
-/**
- * Disable direction buttons when 5 mice have been released.
- */
+/* Disable direction buttons when 5 mice have been released. */
 function endGame() {
     document.getElementById("left").disabled = true;
     document.getElementById("centre").disabled = true;
