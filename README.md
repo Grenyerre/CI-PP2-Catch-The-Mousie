@@ -36,4 +36,44 @@ Colour harmony: Shades
 As the images in the game play area are monochromatic, I wanted to utilize colours in the surrounding area. I wanted to have sufficient contrast between the settings and control buttons, and the background.
 
 ### **Font Choice**
-The font is taken from [Google Fonts](https://fonts.google.com/). It is called Englebert. 
+The font is taken from [Google Fonts](https://fonts.google.com/). It is called Englebert.
+
+![image of fonts.google.com Englebert font](./assets/images/englebert.png)
+
+## **Features**
+
+### **Favicon**
+
+The favicon was created using [favicon.io](https://favicon.io/favicon-converter/).
+I used the image of the cat from the application's landing screen.
+
+### **Settings Buttons**
+
+These are located at the top centre of the display. They allow the user to view the instructions, toggle the music and effects on and off, and reset the game.
+
++ Upon clicking the 'INSTRUCTIONS' button, a modal appears containing written instructions of the game play. The modal can be closed by either clicking the close button, labelled 'It's time to eat!', or by clicking anywhere outside of the modal.
++ Upon landing, the music and effects are muted.
++ Upon clicking the 'RESET' button, the page will reload and all current score information will be lost.
+  
+![image of the modal and its contents](./assets/images/ .png)
+
+### **Game Play Area**
+
+This is the largest section of the page and displays the images of the game's protagonist and antagonist. These images reflect the actions of the player and the computer choice. They also vary at the end of the game to reflect the cat's state of satiety.
+
+### **Score Area**
+
+Here is displayed in numbers how many mice have been caught (eaten!) and how many have escaped.
+
+### **Game Prompt Area**
+
+Messages are displayed here to inform the player of the required action, the result of their actions, and the final ccore messages.
+
+### **Control Buttons**
+
+These allow the player to input their choice of which hole they believe the mouse will appear; left, centre, or right.
+
+### **Footer**
+
+Boiler plate referring to the site's author.
+
