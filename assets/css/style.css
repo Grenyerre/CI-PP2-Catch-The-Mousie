@@ -87,3 +87,9 @@ h1 {
     margin: 0 auto;
     /* Auto margin horizontally centres the image */
 }
+
+#game-image-content {
+    object-fit: contain;
+    padding-top: 75%;
+    /* To maintain a 4:3 aspect ratio */
+}
