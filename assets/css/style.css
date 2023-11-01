@@ -76,11 +76,11 @@ h1 {
 }
 
 .game-image {
+    background-color: #fff;
+    position: relative;
+    width: 70%;
     padding-top: 75%;
     /* To maintain a 4:3 aspect ration */
-    width: 75;
-    max-width: 70%;
-    height: 400px;
     border: 3px solid;
     display: block;
     /* Ensures the image is treated as a block element */
