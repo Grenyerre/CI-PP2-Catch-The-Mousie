@@ -1,4 +1,4 @@
-const controlButtons = document.querySelectorAll("control-button");
+const controlButtons = document.querySelectorAll(".control-button");
 const gameState = document.querySelector("gameState");
 const playerScore = document.getElementById("player-score");
 const computerScore = document.getElementById("computer-score");
@@ -55,73 +55,71 @@ controlButtons.forEach((button => button.addEventListener("click", function () {
     gameState.textContent = checkOutcome();
     checkGameEnd();
 })
-);
 
 /* Generate random number to determine from which hole the mouse appears. */
 function generateMouseLocation() {
-    const computerChoice = Math.floor(Math.random() * 3);
+        const computerChoice = Math.floor(Math.random() * 3);
 
-    switch (computerChoice) {
-        case 0:
-            mouseLocation = 'left';
-            break;
-        case 1:
-            mouseLocation = 'centre';
-            break;
-        case 2:
-            mouseLocation = 'right';
-            break;
+        switch (computerChoice) {
+            case 0:
+                mouseLocation = 'left';
+                break;
+            case 1:
+                mouseLocation = 'centre';
+                break;
+            case 2:
+                mouseLocation = 'right';
+                break;
+        }
     }
-}
 
 /**
  * Check both player and computer choices and determine whether the mouse
  * escaped or was eaten. Alter game image accordingly and increment relevant score.
  */
 function checkOutcome() {
-    let outcome = "";
+        let outcome = "";
 
-    const userPlayImg = `assets/images/cat_${catDirection}_mouse_${mouseLocation}.png`;
-    
-    if (catDirection === mouseLocation) {
-        eaten++;
-        gameImg.src = userPlayImg;
-        outcome.gameState.innerHTML = `You pounced ${catDirection} and the mouse chose ${mouseLocation}. Yum yum!`;
-        playerScore.innerHTML = eaten;
-    } else {
-        escaped++;
-        gameImg.src = userPlayImg;
-        outcome.gameState.innerHTML = `You pounced ${catDirection} and mouse chose ${mouseLocation}. Better luck next time!`;
-        computerScore.innerHTML = escaped;
-    }
+        const userPlayImg = `assets/images/cat_${catDirection}_mouse_${mouseLocation}.png`;
 
-    return outcome;
-}
-document.getElementById("left").disabled = true;
-document.getElementById("centre").disabled = true;
-document.getElementById("right").disabled = true;
+        if (catDirection === mouseLocation) {
+            eaten++;
+            gameImg.src = userPlayImg;
+            outcome.gameState.innerHTML = `You pounced ${catDirection} and the mouse chose ${mouseLocation}. Yum yum!`;
+            playerScore.innerHTML = eaten;
+        } else {
+            escaped++;
+            gameImg.src = userPlayImg;
+            outcome.gameState.innerHTML = `You pounced ${catDirection} and mouse chose ${mouseLocation}. Better luck next time!`;
+            computerScore.innerHTML = escaped;
+        }
 
-
-/* Check whether 5 attempts have been made. */
-function checkGameEnd() {
-    if (eaten < 2) {
-        gameState.innerHTML = `I'm still hungry ${username}, feed me.`;
-        const userPlayImg = "assets/images/cat_still_hungry.png";
-        setTimeout(endGame, 3000);
-    } else if (eaten >= 2 && eaten <= 4) {
-        gameState.innerHTML = `Well done ${username}, I'm almost full.`;
-        const userPlayImg = "assets/images/cat_loaf.png";
-        setTimeout(endGame, 3000);
-    } else {
-        gameState.innerHTML = `Amazing ${username}, I have achieved satiety.`;
-        const userPlayImg = "assets/images/cat_eats_mouse.png";
-        setTimeout(endGame, 3000);
-    }
-}
-
-/* Disable direction buttons when 5 mice have been released. */
-function endGame() {
+        return outcome;
     document.getElementById("left").disabled = true;
     document.getElementById("centre").disabled = true;
     document.getElementById("right").disabled = true;
 }
+
+/* Check whether 5 escape attempts have been made. */
+function checkGameEnd() {
+        if (eaten < 2) {
+            gameState.innerHTML = `I'm still hungry ${username}, feed me.`;
+            const userPlayImg = "assets/images/cat_still_hungry.png";
+            setTimeout(endGame, 3000);
+        } else if (eaten >= 2 && eaten <= 4) {
+            gameState.innerHTML = `Well done ${username}, I'm almost full.`;
+            const userPlayImg = "assets/images/cat_loaf.png";
+            setTimeout(endGame, 3000);
+        } else {
+            gameState.innerHTML = `Amazing ${username}, I have achieved satiety.`;
+            const userPlayImg = "assets/images/cat_eats_mouse.png";
+            setTimeout(endGame, 3000);
+        }
+    }
+
+/* Disable direction buttons when 5 mice have been released. */
+function endGame() {
+        document.getElementById("left").disabled = true;
+        document.getElementById("centre").disabled = true;
+        document.getElementById("right").disabled = true;
+    };
