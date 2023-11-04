@@ -94,10 +94,11 @@ function checkOutcome() {
             computerScore.innerHTML = escaped;
         }
 
-        return outcome;
         document.getElementById("left").disabled = true;
         document.getElementById("centre").disabled = true;
         document.getElementById("right").disabled = true;
+
+        return outcome;
     }
 
 /* Check whether 5 escape attempts have been made. */
