@@ -19,6 +19,13 @@ h1 {
     text-shadow: 3px 3px #482352;
 }
 
+#game-area {
+    position: fixed;
+    left: 0;
+    bottom: 92px;
+    width: 100%;
+}
+
 .settings-button {
     font-family: Englebert, sans-serif;
     text-transform: uppercase;
