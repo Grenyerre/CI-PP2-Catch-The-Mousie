@@ -1,5 +1,5 @@
 const controlButtons = document.querySelectorAll(".control-button");
-const gameState = document.querySelector("gameState");
+const gameState = document.querySelector("game-state");
 const playerScore = document.getElementById("player-score");
 const computerScore = document.getElementById("computer-score");
 const musicButton = document.getElementById("music-button");
@@ -95,10 +95,10 @@ function checkOutcome() {
         }
 
         return outcome;
-    document.getElementById("left").disabled = true;
-    document.getElementById("centre").disabled = true;
-    document.getElementById("right").disabled = true;
-}
+        document.getElementById("left").disabled = true;
+        document.getElementById("centre").disabled = true;
+        document.getElementById("right").disabled = true;
+    }
 
 /* Check whether 5 escape attempts have been made. */
 function checkGameEnd() {
