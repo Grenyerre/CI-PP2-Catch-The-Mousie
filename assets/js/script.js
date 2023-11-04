@@ -15,18 +15,6 @@ let instructionsBox = document.getElementById("instructions-box");
 let closeInstructionsButton = document.getElementById("close-instructions-button");
 let restartButton = document.getElementById("restart-button");
 
-/* Music & FX settings*/
-musicButton.addEventListener("click", function () {
-    if (audio.paused) {
-        audio.volume = 0.2;
-        audio.play();
-        musicButton.innerHTML = "Mute Music & FX";
-    } else {
-        audio.pause();
-        musicButton.innerHTML = "Play Music & FX";
-    }
-});
-
 /** Modal box settings */
 instructionsButton.addEventListener("click", function () {
     instructionsBox.style.display = "block";
@@ -39,6 +27,18 @@ closeInstructionsButton.addEventListener("click", function () {
 window.addEventListener("click", function (e) {
     if (e.target == instructionsBox) {
         instructionsBox.style.display = "none";
+    }
+});
+
+/* Music & FX settings*/
+musicButton.addEventListener("click", function () {
+    if (audio.paused) {
+        audio.volume = 0.2;
+        audio.play();
+        musicButton.innerHTML = "Mute Music & FX";
+    } else {
+        audio.pause();
+        musicButton.innerHTML = "Play Music & FX";
     }
 });
 

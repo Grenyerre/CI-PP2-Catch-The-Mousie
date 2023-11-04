@@ -77,7 +77,7 @@ h1 {
 
 #game-image {
     background-color: #fff;
-    position: relative;
+    display: inline-block;
     width: 70%;
     border: 3px solid;
 }
@@ -96,4 +96,5 @@ h1 {
     height: auto;
     background-color: #b558cc;
     color: #fff;
+    text-decoration: none;
 }
