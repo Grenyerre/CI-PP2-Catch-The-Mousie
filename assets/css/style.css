@@ -90,6 +90,5 @@ h1 {
 
 #game-image-content {
     object-fit: contain;
-    padding-top: 75%;
-    /* To maintain a 4:3 aspect ratio */
+    width: 100%;
 }
