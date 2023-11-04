@@ -109,7 +109,7 @@ function checkGameEnd() {
             setTimeout(endGame, 3000);
         } else if (eaten >= 2 && eaten <= 4) {
             gameState.innerHTML = `Well done ${username}, I'm almost full.`;
-            const userPlayImg = "assets/images/cat_loaf.png";
+            const userPlayImg = "assets/images/cat_full.png";
             setTimeout(endGame, 3000);
         } else {
             gameState.innerHTML = `Amazing ${username}, I have achieved satiety.`;
