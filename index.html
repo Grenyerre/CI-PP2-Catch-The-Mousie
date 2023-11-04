@@ -37,12 +37,14 @@
   <body>
     <!--Header-->
     <header>
-      <h1><i class = "mouse.ico"></i> Catch The Mousie! <i class="mouse.ico"></i></h1>
+      <h1>
+        <i class="mouse.ico"></i> Catch The Mousie! <i class="mouse.ico"></i>
+      </h1>
     </header>
 
-  <main>
-    <!--Game Instructions-->
-    <section id="welcome-area">
+    <main>
+      <!--Game Instructions-->
+      <section id="welcome-area">
         <div id="welcome-instructions">
           <h2>Welcome to Catch The Mousie!</h2>
           <p>
@@ -50,16 +52,29 @@
             can escape through one of 3 holes. <br />From which hole do you
             think each mouse will escape. <br />Choose carefully.
           </p>
-          <span id = "play-game">
-            <a href = "game.html" class = "active">Play Game</a>
-          </span>
         </div>
-      </aside>
+      </section>
 
-  </main>
+      <section id="user-name">
+        <label for="user-name">User Name</label>
+        <input
+          type="text"
+          name="username"
+          id="username"
+          class="text-input"
+          required
+        />
+      </section>
+
+      <section id="play-game">
+        <span id="play-game">
+          <a href="game.html" class="active">Play Game</a>
+        </span>
+      </section>
+    </main>
     <footer>
       <p>
-        Simon's Cat Copyright 2023 Simon Tofield <br>
+        Simon's Cat Copyright 2023 Simon Tofield <br />
         Developed by
         <a href="https://github.com/Grenyerre" target="_blank" rel="nofollow"
           >R. E. Grenyer</a
@@ -67,6 +82,5 @@
         for Code Institute's Portfolio Project 2 - 11/2023
       </p>
     </footer>
-
   </body>
 </html>
