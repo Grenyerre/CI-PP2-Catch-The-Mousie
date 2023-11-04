@@ -30,7 +30,7 @@
       sizes="16x16"
       href="assets/images/favicon/favicon-16x16.png"
     />
-    
+
     <title>Catch The Mousie Game</title>
   </head>
 
@@ -55,7 +55,7 @@
         </div>
       </aside>
 
-      <!--Settings Section-->
+      <!--Settings section-->
       <section id="settings-buttons-area">
         <button class="settings-button" id="instructions-button">
           Instructions
@@ -66,14 +66,22 @@
         </button>
       </section>
 
+      <!-- Game Image section-->
       <section id="game-image">
         <img
           id="game-image-content"
           src="assets/images/initial_game_image.png"
           alt="cat sat infront of three small holes in the ground"
         />
+
+        <section class="controls">
+            <button class="control-button" id="left">Left</button>
+            <button class="control-button" id="centre">Centre</button>
+            <button class="control-button" id="right">Right</button>
+            </section>
       </section>
 
+      <!-- Scores section-->
       <section id="score-area">
         <h2>
           Eaten: <span id="player-score">0</span> Escaped:
@@ -81,14 +89,9 @@
         </h2>
       </section>
 
-      <!-- Game Prompts -->
+      <!-- Game Prompts section-->
       <h2><span id="game-state">Choose a hole and pounce!</span></h2>
 
-      <section class="controls">
-        <button class="control-button" id="left">Left</button>
-        <button class="control-button" id="centre">Centre</button>
-        <button class="control-button" id="right">Right</button>
-      </section>
     </main>
 
     <audio id="audio" src="assets/audio/soundtrack.mp3" loop></audio> -->

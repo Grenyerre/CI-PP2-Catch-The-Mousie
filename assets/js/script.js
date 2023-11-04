@@ -3,7 +3,7 @@ const gameState = document.querySelector("game-state");
 const playerScore = document.getElementById("player-score");
 const computerScore = document.getElementById("computer-score");
 const musicButton = document.getElementById("music-button");
-const audio = document.querySelector("audio");
+const audio = document.querySelector("#audio");
 
 let catDirection;
 let mouseLocation;
@@ -116,11 +116,12 @@ function checkGameEnd() {
             const userPlayImg = "assets/images/cat_eats_mouse.png";
             setTimeout(endGame, 3000);
         }
-    }
-
-/* Disable direction buttons when 5 mice have been released. */
-function endGame() {
-        document.getElementById("left").disabled = true;
-        document.getElementById("centre").disabled = true;
-        document.getElementById("right").disabled = true;
     };
+
+/* Disable direction buttons when 5 mice have been released.
+ * function endGame() {
+ *        document.getElementById("left").disabled = true;
+ *        document.getElementById("centre").disabled = true;
+ *       document.getElementById("right").disabled = true;
+ *   };
+ */
