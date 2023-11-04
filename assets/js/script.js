@@ -10,12 +10,14 @@ let mouseLocation;
 let eaten = 0;
 let escaped = 0;
 let gameImg = document.getElementById("game-image");
-let instructionsButton = document.getElementById("instructions-button");
-let instructionsBox = document.getElementById("instructions-box");
+
+var instructionsBox = document.getElementById("instructions-box");
+var instructionsButton = document.getElementById("instructions-button");
 let closeInstructionsButton = document.getElementById("close-instructions-button");
+
 let restartButton = document.getElementById("restart-button");
 
-/** Modal box settings */
+/** Modal box settings - adapted from w3schools.com */
 instructionsButton.addEventListener("click", function () {
     instructionsBox.style.display = "block";
 });
@@ -47,6 +49,23 @@ restartButton.addEventListener("click", function () {
     location.reload();
 });
 
+/* Generate random number to determine from which hole the mouse appears. */
+function generateMouseLocation() {
+    const computerChoice = Math.floor(Math.random() * 3);
+
+    switch (computerChoice) {
+        case 0:
+            mouseLocation = 'left';
+            break;
+        case 1:
+            mouseLocation = 'centre';
+            break;
+        case 2:
+            mouseLocation = 'right';
+            break;
+    }
+}
+
 
 /* Take the player's chosen direction and call the computer choice function */
 controlButtons.forEach((button => button.addEventListener("click", function () {
@@ -56,28 +75,10 @@ controlButtons.forEach((button => button.addEventListener("click", function () {
     checkGameEnd();
 })
 
-/* Generate random number to determine from which hole the mouse appears. */
-function generateMouseLocation() {
-        const computerChoice = Math.floor(Math.random() * 3);
-
-        switch (computerChoice) {
-            case 0:
-                mouseLocation = 'left';
-                break;
-            case 1:
-                mouseLocation = 'centre';
-                break;
-            case 2:
-                mouseLocation = 'right';
-                break;
-        }
-    }
-
-/**
- * Check both player and computer choices and determine whether the mouse
- * escaped or was eaten. Alter game image accordingly and increment relevant score.
- */
-function checkOutcome() {
+/* Compare player and computer choices */
+/* Determine whether the mouse escaped or was eaten */
+/* Alter game image accordingly and increment relevant score */
+function checkOutcome(catDirection, mouseLocation) {
         let outcome = "";
 
         const userPlayImg = `assets/images/cat_${catDirection}_mouse_${mouseLocation}.png`;
@@ -87,16 +88,13 @@ function checkOutcome() {
             gameImg.src = userPlayImg;
             outcome.gameState.innerHTML = `You pounced ${catDirection} and the mouse chose ${mouseLocation}. Yum yum!`;
             playerScore.innerHTML = eaten;
+            
         } else {
             escaped++;
             gameImg.src = userPlayImg;
             outcome.gameState.innerHTML = `You pounced ${catDirection} and mouse chose ${mouseLocation}. Better luck next time!`;
             computerScore.innerHTML = escaped;
         }
-
-        document.getElementById("left").disabled = true;
-        document.getElementById("centre").disabled = true;
-        document.getElementById("right").disabled = true;
 
         return outcome;
     }
@@ -118,10 +116,9 @@ function checkGameEnd() {
         }
     };
 
-/* Disable direction buttons when 5 mice have been released.
- * function endGame() {
- *        document.getElementById("left").disabled = true;
- *        document.getElementById("centre").disabled = true;
- *       document.getElementById("right").disabled = true;
- *   };
- */
+/* Disable direction buttons when 5 mice have been released */
+function endGame() {
+    document.getElementById("left").disabled = true;
+    document.getElementById("centre").disabled = true;
+    document.getElementById("right").disabled = true;
+};
