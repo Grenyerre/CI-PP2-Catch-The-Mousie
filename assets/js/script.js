@@ -1,5 +1,5 @@
 const controlButtons = document.querySelectorAll(".control-button");
-const gameState = document.querySelector("game-state");
+const gameState = document.getElementById("game-state");
 const playerScore = document.getElementById("player-score");
 const computerScore = document.getElementById("computer-score");
 const musicButton = document.getElementById("music-button");
@@ -37,13 +37,13 @@ window.addEventListener("click", function (e) {
 
 /* Music & FX settings*/
 musicButton.addEventListener("click", function () {
-    if (audio.paused) {
-        audio.volume = 0.2;
-        audio.play();
-        musicButton.innerHTML = "Mute Music & FX";
+    if (soundtrack.paused) {
+        soundtrack.volume = 0.2;
+        soundtrack.play();
+        musicButton.innerHTML = "Mute Music";
     } else {
-        audio.pause();
-        musicButton.innerHTML = "Play Music & FX";
+        soundtrack.pause();
+        musicButton.innerHTML = "Play Music";
     }
 });
 
@@ -84,11 +84,11 @@ controlButtons.forEach((button => button.addEventListener("click", function () {
 function checkResult(catDirection, mouseLocation) {
         let outcome = "";
 
-        gameImage = `assets/images/cat_${catDirection}_mouse_${mouseLocation}.png`;
+        let gameImage = `assets/images/cat_${catDirection}_mouse_${mouseLocation}.png`;
 
         if (catDirection === mouseLocation) {
             eaten++;
-            gameImg.src = userPlayImg;
+            gameImage.src = gameImage;
             outcome.gameState.innerHTML = `You pounced ${catDirection} and the mouse chose ${mouseLocation}. Yum yum!`;
             playerScore.innerHTML = eaten;
             function playAudio() {
@@ -96,7 +96,7 @@ function checkResult(catDirection, mouseLocation) {
             }
         } else {
             escaped++;
-            gameImg.src = userPlayImg;
+            gameImage.src = gameImage;
             outcome.gameState.innerHTML = `You pounced ${catDirection} and mouse chose ${mouseLocation}. Better luck next time!`;
             computerScore.innerHTML = escaped;
             function playAudio() {
@@ -110,15 +110,15 @@ function checkResult(catDirection, mouseLocation) {
 /* Check whether 5 escape attempts have been made. */
 function checkGameEnd() {
         if (eaten < 2) {
-            gameState.innerHTML = `${username} is still hungry, feed me.`;
+            gameState.innerHTML = `${userName} is still hungry, feed me.`;
             const userPlayImg = "assets/images/cat_still_hungry.png";
             setTimeout(endGame, 3000);
         } else if (eaten >= 2 && eaten <= 4) {
-            gameState.innerHTML = `Well done ${username}, you're almost full.`;
+            gameState.innerHTML = `Well done ${userName}, you're almost full.`;
             const userPlayImg = "assets/images/cat_full.png";
             setTimeout(endGame, 3000);
         } else {
-            gameState.innerHTML = `Amazing ${username}, you have achieved satiety.`;
+            gameState.innerHTML = `Amazing ${userName}, you have achieved satiety.`;
             const userPlayImg = "assets/images/cat_eats_mouse.png";
             setTimeout(endGame, 3000);
         }
@@ -130,5 +130,5 @@ function endGame() {
     document.getElementById("centre").disabled = true;
     document.getElementById("right").disabled = true;
 
-    gameState.innerHTML = `${username}, if you want to play again, please press 'Restart Game'`;
+    gameState.innerHTML = `${userName}, if you want to play again, please press 'Restart Game'`;
 };
