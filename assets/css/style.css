@@ -1,10 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Englebert&display=swap');
 
-/** #header {
- *  height: 10%;
- *  font-size: 16px;
-} */
-
 body {
     font-family: Englebert, sans-serif;
     background-color: #d467f0;
@@ -106,7 +101,7 @@ h1 {
     color: #482352;
 }
 
-#game-image {
+#game-image-area {
     background-color: #fff;
     display: inline-block;
     width: 70%;
