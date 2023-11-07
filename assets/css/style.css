@@ -41,7 +41,6 @@ h1 {
 }
 
 #game-area {
-    position: fixed;
     left: 0;
     bottom: 92px;
     width: 100%;
