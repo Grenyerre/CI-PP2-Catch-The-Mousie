@@ -20,6 +20,17 @@ h1 {
     text-shadow: 3px 3px #482352;
 }
 
+#welcome-area {
+    color: #ffffff;
+    background-color: #482352;
+    padding: 30px;
+    border-radius: 0 50px 0 50px;
+}
+
+#user-name {
+    margin: 0 0 20px 0;
+}
+
 #play-game {
     list-style-type: none;
     width: 100px;
@@ -29,10 +40,9 @@ h1 {
     text-align: center;
     margin: auto;
     padding: 10px;
-    background-color: #6c357a;
+    background-color: #fff;
     border-radius: 0 10px 0 10px;
-    box-shadow: 2px 2px 5px 5px black;
-    color: #fff;
+    box-shadow: 5px 5px 5px black;
 }
 
 #game-area {
