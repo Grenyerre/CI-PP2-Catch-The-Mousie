@@ -3,7 +3,7 @@ const gameState = document.querySelector("game-state");
 const playerScore = document.getElementById("player-score");
 const computerScore = document.getElementById("computer-score");
 const musicButton = document.getElementById("music-button");
-
+const userName = document.getElementById("user-name");
 const soundtrack = document.getElementById("soundtrack");
 const meow = document.getElementById("meow");
 const purr = document.getElementById("purr");
@@ -89,7 +89,7 @@ function checkResult(catDirection, mouseLocation) {
         if (catDirection === mouseLocation) {
             eaten++;
             gameImg.src = userPlayImg;
-            outcome.gameState.innerHTML = `The cat pounced ${catDirection} and the mouse chose ${mouseLocation}. Yum yum!`;
+            outcome.gameState.innerHTML = `You pounced ${catDirection} and the mouse chose ${mouseLocation}. Yum yum!`;
             playerScore.innerHTML = eaten;
             function playAudio() {
                 purr.play();
@@ -97,7 +97,7 @@ function checkResult(catDirection, mouseLocation) {
         } else {
             escaped++;
             gameImg.src = userPlayImg;
-            outcome.gameState.innerHTML = `The cat pounced ${catDirection} and mouse chose ${mouseLocation}. Better luck next time!`;
+            outcome.gameState.innerHTML = `You pounced ${catDirection} and mouse chose ${mouseLocation}. Better luck next time!`;
             computerScore.innerHTML = escaped;
             function playAudio() {
                 meow.play();
