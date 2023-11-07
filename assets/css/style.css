@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Englebert&display=swap');
 
-#header {
-    height: 10%;
-    font-size: 16px;
-}
+/** #header {
+ *  height: 10%;
+ *  font-size: 16px;
+} */
 
 body {
     font-family: Englebert, sans-serif;
@@ -141,7 +141,7 @@ h1 {
     bottom: 0;
     width: 100%;
     padding: 10px;
-    height: 10%;
+    height: 7%;
     background-color: #b558cc;
     color: #fff;
     text-decoration: none;

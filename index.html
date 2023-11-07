@@ -56,18 +56,19 @@
           </p>
         </div>
 
-        <div id="user-name">
+        <form>
+          <div id="user-name">
             <p>Please enter your name.</p>
-            <label for="user-name">Name: </label>
-            <input
+            <label for="username">Name: </label>
+            <input autocomplete="off"
                 type="text"
                 name="username"
                 id="username"
-                class="text-input"
                 required
             />
             <input type="submit" value="Enter" />
-        </div>
+          </div>
+        </form>
 
         <ul id="play-game">
             <li><a href="game.html" class="active">Play Game</a></li>
