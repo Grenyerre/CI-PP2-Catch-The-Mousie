@@ -86,21 +86,21 @@ function checkResult(catDirection, mouseLocation) {
     let gameImage = `assets/images/cat_${catDirection}_mouse_${mouseLocation}.png`;
     gameImage.src = gameImage;
 
-if (catDirection === mouseLocation) {
-    eaten++;
-    outcome = `You pounced ${catDirection} and the mouse chose ${mouseLocation}. Yum yum!`;
-    gameState.innerHTML = outcome;
-    playerScore.innerHTML = eaten;
-    purr.loop = false;
-    purr.play();
-} else {
-    escaped++;
-    outcome = `You pounced ${catDirection} and mouse chose ${mouseLocation}. Better luck next time!`;
-    gameState.innerHTML = outcome;
-    computerScore.innerHTML = escaped;
-    meow.loop = false;
-    meow.play();
-}
+    if (catDirection === mouseLocation) {
+        eaten++;
+        outcome = `You pounced ${catDirection} and the mouse chose ${mouseLocation}. Yum yum!`;
+        gameState.innerHTML = outcome;
+        playerScore.innerHTML = eaten;
+        purr.loop = false;
+        purr.play();
+    } else {
+        escaped++;
+        outcome = `You pounced ${catDirection} and mouse chose ${mouseLocation}. Better luck next time!`;
+        gameState.innerHTML = outcome;
+        computerScore.innerHTML = escaped;
+        meow.loop = false;
+        meow.play();
+    }
 
     return outcome;
 }
@@ -110,15 +110,15 @@ function checkGameEnd() {
     if (escaped == 5 && eaten == 0 || escaped == 4 && eaten == 1) {
         gameState.innerHTML = `Never mind, ${catName} is still hungry, more mice needed!.`;
         const gameImage = "assets/images/cat_still_hungry.png";
-        setTimeout(endGame, 3000);
+        endGame();
     } else if (escaped == 3 && eaten == 2 || escaped == 2 && eaten == 3) {
         gameState.innerHTML = `Good attempt! ${catName} is almost full.`;
         const gameImage = "assets/images/cat_full.png";
-        setTimeout(endGame, 3000);
-    } else  if (escaped == 1 && eaten ==4 || escaped == 0 && eaten == 5) {
+        endGame();
+    } else if (escaped == 1 && eaten == 4 || escaped == 0 && eaten == 5) {
         gameState.innerHTML = `Well done! ${catName} has achieved satiety.`;
         const gameImage = "assets/images/cat_eats_mouse.png";
-        setTimeout(endGame, 3000);
+        endGame();
     }
 };
 
