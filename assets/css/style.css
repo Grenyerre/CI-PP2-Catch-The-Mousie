@@ -109,6 +109,8 @@ h1 {
 
 #game-image {
     width: 100%;
+    /* Suggested by stack overflow to centralze the image */
+    margin: 0 auto;
 }
 
 .control-button {
