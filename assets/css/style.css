@@ -135,8 +135,8 @@ h1 {
     position: fixed;
     left: 0;
     bottom: 0;
-    width: 100%;
-    padding: 10px;
+    margin: 10px;
+    padding: 20px;
     height: 7%;
     background-color: #b558cc;
     color: #fff;
