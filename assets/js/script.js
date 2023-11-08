@@ -8,7 +8,7 @@ const soundtrack = document.getElementById("soundtrack");
 const meow = document.getElementById("meow");
 const purr = document.getElementById("purr");
 const felines = ["Tom", "Sarah", "Harry", "Leela", "KitKat", "Romana", "Adric", "Nyssa", "Tegan", "Peri"];
-const catName = document.getElememtById("cat-name");
+const catName = document.getElementById("cat-name");
 let catDirection;
 let mouseLocation;
 let eaten = 0;
@@ -120,10 +120,10 @@ function checkResult(catDirection, mouseLocation) {
 
 /* Check whether 5 attempts have been made. */
 function checkGameEnd() {
-    console.log("Am I ever called!");
+
     if (escaped == 5 && eaten == 0 || escaped == 4 && eaten == 1) {
         gameState.innerHTML = `Never mind, ${catName} is still hungry, more mice needed!.`;
-        gameImage.innerHTML = "assets/images/cat_still_hungry.png";
+        gameImage = "assets/images/cat_still_hungry.png";
         endGame();
     } else if (escaped == 3 && eaten == 2 || escaped == 2 && eaten == 3) {
         gameState.innerHTML = `Good attempt! ${catName} is almost full.`;
