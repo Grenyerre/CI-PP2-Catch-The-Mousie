@@ -1,4 +1,5 @@
 const controlButtons = document.querySelectorAll(".control-button");
+const finalMessage = document.getElementById("final-msg");
 const gameState = document.getElementById("game-state");
 const playerScore = document.getElementById("player-score");
 const computerScore = document.getElementById("computer-score");
@@ -8,7 +9,7 @@ const soundtrack = document.getElementById("soundtrack");
 const meow = document.getElementById("meow");
 const purr = document.getElementById("purr");
 const felines = ["Tom", "Sarah", "Harry", "Leela", "KitKat", "Romana", "Adric", "Nyssa", "Tegan", "Peri"];
-const catName = document.getElementById("cat-name");
+const felinePronoun = document.getElementById("cat-name");
 let catDirection;
 let mouseLocation;
 let eaten = 0;
@@ -54,12 +55,11 @@ restartButton.addEventListener("click", function () {
 });
 /* Generate random number to select catName from the array felines */
 function chooseCatName() {
-    let catName = "";
+
     const rndNum = Math.floor(Math.random() * 10);
     catName = felines[rndNum];
-    return catName;
-    console.log(catName);
-    catName.innerHTML = `Your cat is called ${catName}`;
+
+    felinePronoun.innerHTML = `Your cat is called ${catName}`;
 }
 
 chooseCatName();
@@ -122,16 +122,19 @@ function checkResult(catDirection, mouseLocation) {
 function checkGameEnd() {
 
     if (escaped == 5 && eaten == 0 || escaped == 4 && eaten == 1) {
-        gameState.innerHTML = `Never mind, ${catName} is still hungry, more mice needed!.`;
-        gameImage = "assets/images/cat_still_hungry.png";
+        finalMessage.innerHTML = `Never mind, ${catName} is still hungry, more mice needed!.`;
+        imageSrc = "assets/images/cat_still_hungry.png";
+        gameImage.src = imageSrc;
         endGame();
     } else if (escaped == 3 && eaten == 2 || escaped == 2 && eaten == 3) {
-        gameState.innerHTML = `Good attempt! ${catName} is almost full.`;
-        gameImage = "assets/images/cat_full.png";
+        finalMessage.innerHTML = `Good attempt! ${catName} is almost full.`;
+        imageSrc = "assets/images/cat_full.png";
+        gameImage.src = imageSrc;
         endGame();
     } else if (escaped == 1 && eaten == 4 || escaped == 0 && eaten == 5) {
-        gameState.innerHTML = `Well done! ${catName} has achieved satiety.`;
-        gameImage = "assets/images/cat_eats_mouse.png";
+        finalMessage.innerHTML = `Well done! ${catName} has achieved satiety.`;
+        imageSrc = "assets/images/cat_eats_mouse.png";
+        gameImage.src = imageSrc;
         endGame();
     }
 }
