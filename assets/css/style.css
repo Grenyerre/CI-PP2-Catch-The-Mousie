@@ -100,14 +100,16 @@ h1 {
     color: #482352;
 }
 
-#game-image-area {
+#game-image-area,
+#welcome-image-area {
     background-color: #fff;
     display: inline-block;
     width: 70%;
     border: 3px solid;
 }
 
-#game-image {
+#game-image,
+#welcome-image {
     width: 100%;
     /* Suggested by stack overflow to centralze the image */
     margin: 0 auto;
@@ -130,11 +132,7 @@ h1 {
     color: #fff;
 }
 
-/* Code for footer position taken from w3schools.com */
 #footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
     margin: 10px;
     padding: 20px;
     height: 7%;
