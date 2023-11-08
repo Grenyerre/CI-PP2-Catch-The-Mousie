@@ -7,7 +7,7 @@ const userName = document.getElementById("user-name");
 const soundtrack = document.getElementById("soundtrack");
 const meow = document.getElementById("meow");
 const purr = document.getElementById("purr");
-const felines = ["Tom", "Sarah", "Harry", "Leela", "KitKat", "Romana", "Adric", "Nyssa", "Tegan"];
+const felines = ["Tom", "Sarah", "Harry", "Leela", "KitKat", "Romana", "Adric", "Nyssa", "Tegan", "Peri"];
 
 let catDirection;
 let mouseLocation;
@@ -52,7 +52,15 @@ musicButton.addEventListener("click", function () {
 restartButton.addEventListener("click", function () {
     location.reload();
 });
+/* Generate random number to select catName from the array felines */
+function chooseCatName() {
+    let catName = "";
+    const rndNum = Math.floor(Math.random() * 10);
+    catName = felines[rndNum];
+}
 
+chooseCatName();
+gameState.innerHTML = `Your cat is called ${catName}`;
 /* Generate random number to determine from which hole the mouse will appear. */
 function generateMouseLocation() {
     const computerChoice = Math.floor(Math.random() * 3);
