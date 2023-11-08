@@ -80,24 +80,24 @@ controlButtons.forEach((button => button.addEventListener("click", function () {
 
 function selectGameImage(catDirection, mouseLocation) {
 
-    if (catDirection === centre) && (mouseLocation === centre) {
-        let gameImage = "assets/images/cat_centre_mouse_centre.png;;;
-    } else if (catDirection === left) && (mouseLocation === left) {
-        let gameImage = "assets/images/cat_left_mouse_left.png;;;
-    } else if (catDirection === right) && (mouseLocation === right) {
-        let gameImage = "assets/images/cat_right_mouse_right.png;;;
-    } else if (catDirection === centre) && (mouseLocation === left) {
-        let gameImage = "assets/images/cat_centre_mouse_left.png;;;;
-    } else if (catDirection === centre) && (mouseLocation === right) {
-        let gameImage = "assets/images/cat_centre_mouse_right.png;;;;
-    } else if (catDirection === left) && (mouseLocation === centre) {
-        let gameImage = "assets/images/cat_left_mouse_centre.png;;;
-    } else if (catDirection === left) && (mouseLocation === right) {
-        let gameImage = "assets/images/cat_left_mouse_centre.png;;;;
-    } else if (catDirection === right) && (mouseLocation === centre) {
-        let gameImage = "assets/images/cat_right_mouse_centre.png;;;;
-    } else (catDirection === right) && (mouseLocation === left) {
-        let gameImage = "assets/images/cat_right_mouse_left.png;;;
+    if (catDirection === centre && mouseLocation === centre) {
+        let gameImage = "assets/images/cat_centre_mouse_centre.png";
+    } else if (catDirection === left && mouseLocation === left) {
+        let gameImage = "assets/images/cat_left_mouse_left.png";
+    } else if (catDirection === right && mouseLocation === right) {
+        let gameImage = "assets/images/cat_right_mouse_right.png";
+    } else if (catDirection === centre && mouseLocation === left) {
+        let gameImage = "assets/images/cat_centre_mouse_left.png";
+    } else if (catDirection === centre && mouseLocation === right) {
+        let gameImage = "assets/images/cat_centre_mouse_right.png";
+    } else if (catDirection === left && mouseLocation === centre) {
+        let gameImage = "assets/images/cat_left_mouse_centre.png";
+    } else if (catDirection === left && mouseLocation === right) {
+        let gameImage = "assets/images/cat_left_mouse_centre.png";
+    } else if (catDirection === right && mouseLocation === centre) {
+        let gameImage = "assets/images/cat_right_mouse_centre.png";
+    } else (catDirection === right && mouseLocation === left) {
+        let gameImage = "assets/images/cat_right_mouse_left.png";
     }
 
 
