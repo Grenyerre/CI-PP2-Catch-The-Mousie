@@ -61,6 +61,7 @@ function chooseCatName() {
 
 chooseCatName();
 gameState.innerHTML = `Your cat is called ${catName}`;
+
 /* Generate random number to determine from which hole the mouse will appear. */
 function generateMouseLocation() {
     const computerChoice = Math.floor(Math.random() * 3);
@@ -119,18 +120,18 @@ function checkGameEnd() {
     console.log("Am I ever called!");
     if (escaped == 5 && eaten == 0 || escaped == 4 && eaten == 1) {
         gameState.innerHTML = `Never mind, ${catName} is still hungry, more mice needed!.`;
-        let gameImage = "assets/images/cat_still_hungry.png";
+        gameImage.innerHTML = "assets/images/cat_still_hungry.png";
         endGame();
     } else if (escaped == 3 && eaten == 2 || escaped == 2 && eaten == 3) {
         gameState.innerHTML = `Good attempt! ${catName} is almost full.`;
-        let gameImage = "assets/images/cat_full.png";
+        gameImage = "assets/images/cat_full.png";
         endGame();
     } else if (escaped == 1 && eaten == 4 || escaped == 0 && eaten == 5) {
         gameState.innerHTML = `Well done! ${catName} has achieved satiety.`;
-        let gameImage = "assets/images/cat_eats_mouse.png";
+        gameImage = "assets/images/cat_eats_mouse.png";
         endGame();
     }
-};
+}
 
 /* Disable direction buttons when 5 mice have been released */
 function endGame() {
