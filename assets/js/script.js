@@ -99,7 +99,7 @@ if (catDirection === mouseLocation) {
     gameState.innerHTML = outcome;
     computerScore.innerHTML = escaped;
     meow.loop = false;
-        meow.play();
+    meow.play();
 }
 
     return outcome;
@@ -107,17 +107,17 @@ if (catDirection === mouseLocation) {
 
 /* Check whether 5 escape attempts have been made. */
 function checkGameEnd() {
-    if (escaped == 5) {
-        gameState.innerHTML = `${userName} is still hungry, feed me.`;
-        const userPlayImg = "assets/images/cat_still_hungry.png";
+    if (escaped == 5 && eaten == 0 || escaped == 4 && eaten == 1) {
+        gameState.innerHTML = `Never mind, ${catName} is still hungry, more mice needed!.`;
+        const gameImage = "assets/images/cat_still_hungry.png";
         setTimeout(endGame, 3000);
-    } else if (escaped == 4 && eaten == 1 || escaped == 3 && eaten == 2 || escaped == 2 && eaten == 3) {
-        gameState.innerHTML = `Well done ${userName}, you're almost full.`;
-        const userPlayImg = "assets/images/cat_full.png";
+    } else if (escaped == 3 && eaten == 2 || escaped == 2 && eaten == 3) {
+        gameState.innerHTML = `Good attempt! ${catName} is almost full.`;
+        const gameImage = "assets/images/cat_full.png";
         setTimeout(endGame, 3000);
-    } else {
-        gameState.innerHTML = `Amazing ${userName}, you have achieved satiety.`;
-        const userPlayImg = "assets/images/cat_eats_mouse.png";
+    } else  if (escaped == 1 && eaten ==4 || escaped == 0 && eaten == 5) {
+        gameState.innerHTML = `Well done! ${catName} has achieved satiety.`;
+        const gameImage = "assets/images/cat_eats_mouse.png";
         setTimeout(endGame, 3000);
     }
 };
