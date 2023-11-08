@@ -7,6 +7,7 @@ const userName = document.getElementById("user-name");
 const soundtrack = document.getElementById("soundtrack");
 const meow = document.getElementById("meow");
 const purr = document.getElementById("purr");
+const felines = ["Tom", "Sarah", "Harry", "Leela", "KitKat", "Romana", "Adric", "Nyssa", "Tegan"];
 
 let catDirection;
 let mouseLocation;
@@ -52,7 +53,7 @@ restartButton.addEventListener("click", function () {
     location.reload();
 });
 
-/* Generate random number to determine from which hole the mouse appears. */
+/* Generate random number to determine from which hole the mouse will appear. */
 function generateMouseLocation() {
     const computerChoice = Math.floor(Math.random() * 3);
 
@@ -75,6 +76,7 @@ controlButtons.forEach((button => button.addEventListener("click", function () {
     catDirection = button.textContent;
     generateMouseLocation();
     checkResult(catDirection, mouseLocation);
+    checkGameEnd(escaped, eaten);
 })));
 
 /* Compare player and computer choices */
@@ -82,9 +84,8 @@ controlButtons.forEach((button => button.addEventListener("click", function () {
 /* Alter game image accordingly and increment relevant score */
 function checkResult(catDirection, mouseLocation) {
     let outcome = "";
-
-    let gameImage = `assets/images/cat_${catDirection}_mouse_${mouseLocation}.png`;
-    gameImage.src = gameImage;
+    let imageSrc = `assets/images/cat_${catDirection}_mouse_${mouseLocation}.png`;
+    gameImage.src = imageSrc;
 
     if (catDirection === mouseLocation) {
         eaten++;
@@ -93,7 +94,7 @@ function checkResult(catDirection, mouseLocation) {
         playerScore.innerHTML = eaten;
         purr.loop = false;
         purr.play();
-    } else {
+    } else if (catDirection !== mouseLocation) {
         escaped++;
         outcome = `You pounced ${catDirection} and mouse chose ${mouseLocation}. Better luck next time!`;
         gameState.innerHTML = outcome;
@@ -105,19 +106,20 @@ function checkResult(catDirection, mouseLocation) {
     return outcome;
 }
 
-/* Check whether 5 escape attempts have been made. */
+/* Check whether 5 attempts have been made. */
 function checkGameEnd() {
+    console.log("Am I ever called!");
     if (escaped == 5 && eaten == 0 || escaped == 4 && eaten == 1) {
         gameState.innerHTML = `Never mind, ${catName} is still hungry, more mice needed!.`;
-        const gameImage = "assets/images/cat_still_hungry.png";
+        let gameImage = "assets/images/cat_still_hungry.png";
         endGame();
     } else if (escaped == 3 && eaten == 2 || escaped == 2 && eaten == 3) {
         gameState.innerHTML = `Good attempt! ${catName} is almost full.`;
-        const gameImage = "assets/images/cat_full.png";
+        let gameImage = "assets/images/cat_full.png";
         endGame();
     } else if (escaped == 1 && eaten == 4 || escaped == 0 && eaten == 5) {
         gameState.innerHTML = `Well done! ${catName} has achieved satiety.`;
-        const gameImage = "assets/images/cat_eats_mouse.png";
+        let gameImage = "assets/images/cat_eats_mouse.png";
         endGame();
     }
 };
@@ -128,5 +130,5 @@ function endGame() {
     document.getElementById("centre").disabled = true;
     document.getElementById("right").disabled = true;
 
-    gameState.innerHTML = `${userName}, if you want to play again, please press 'Restart Game'`;
+    gameState.innerHTML = "To play again, please press the Restart Game button";
 }
