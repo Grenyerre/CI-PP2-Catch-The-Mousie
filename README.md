@@ -65,6 +65,10 @@ These are located at the top centre of the display. They allow the user to view 
 
 This is the largest section of the page and displays the images of the game's protagonist and antagonist. These images reflect the actions of the player and the computer choice. They also vary at the end of the game to reflect the cat's state of satiety.
 
+### **Control Buttons**
+
+These allow the player to input their choice of which hole they believe the mouse will appear; left, centre, or right.
+
 ### **Score Area**
 
 Here is displayed in numbers how many mice have been caught (eaten!) and how many have escaped.
@@ -73,19 +77,16 @@ Here is displayed in numbers how many mice have been caught (eaten!) and how man
 
 Messages are displayed here to inform the player of the required action, the result of their actions, and the final ccore messages.
 
-### **Control Buttons**
-
-These allow the player to input their choice of which hole they believe the mouse will appear; left, centre, or right.
-
 ### **Footer**
 
-Boiler plate referring to the site's author.
+Contains information regarding the copyright owner of the images and music used and the site's author.
 
 ## **Ideas In Development**
 
 - Increase the number of holes from which the mouse can escape to five. Probability: 70%.
 - To separate the music and sound effects so that they can be toggled on/off independently. Probability: 50%.
 - Alter the game graphics to allow the user to choose the cat's colouring; black, tortoiseshell, ginger, grey. Probability: 10%.
+- To include a high score table to record the highest scores, the date and the player name. Probability: 10%.
 
 ## **Software Used**
 
@@ -118,18 +119,30 @@ Below is a list of the software/applications used in the construction of this pr
 
 ## **Testing**
 
+### Alternative Browsers
+
+Once deployed, I tested the site using the following browsers; Google Chrome, Mozilla Firefox, Microsoft Edge, and Opera Software's Opera. Each browser loaded successfully and no issues were detected.
+
+![screenshot of site running on Google Chrome](./assets/images/chrome_screenshot.png)
+
+![screenshot of site running on Mozilla Firefox](./assets/images/firefox_screenshot.png)
+
+![screenshot of site running on Microsoft Edge](./assets/images/edge_screenshot.png)
+
+![screenshot of site running on Opera](./assets/images/opera_screenshot.png)
+
 ## **Debugging**
 
 ## **Deployment**
 
-## **Deployment - Local**
+The site was deployed to GitHub pages.
 
 ## **Credits**
 
-- I would like to credit another Code Institute student, Adam Gilroy, with the game layout upon which 'Catch The Mousie!' is based.
+- I would like to credit a Code Institute alumni, Adam Gilroy, with the game layout upon which 'Catch The Mousie!' is based.
 - I visited w3schools.com numerous times during this project's inception. The code for the modal is based upon this page; [w3schools css modal how to](https://w3schools.com/howto/howto_css_modals.asp/).
 -
 
 ## **Acknowledgements**
 
-I would like to thank my mentor(s), Luke Buchanan and Daisy McGirr (who stood in for Luke) for their guidance, understanding and support. Additionally, I would like to thank my wife Tracy for her consistent resilience, support, and encouragement.
+I would like to thank my mentor(s), Luke Buchanan and Daisy McGirr (who stood in for Luke whilst on leave) for their guidance, understanding and support. I would also like to thank John and Martin from the Code Institute Tutoring Team for their assistance. Additionally, I would like to thank my wife Tracy for her consistent resilience, support, and encouragement.
