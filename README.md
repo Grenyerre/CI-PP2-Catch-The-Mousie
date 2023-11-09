@@ -131,6 +131,14 @@ Once deployed, I tested the site using the following browsers; Google Chrome, Mo
 
 ![screenshot of site running on Opera](./assets/images/opera_screenshot.png)
 
+### Software Validation Testing
+
+![screenshot of w3c validator index.html](./assets/images/validator_index.html_screenshot.png)
+
+![screenshot of w3c validator game.html](./assets/images/validator_game.html_screenshot.png)
+
+![screenshot of w3c validator css](./assets/images/validator_css_screenshot.png)
+
 ## **Debugging**
 
 ## **Deployment**
