@@ -17,12 +17,13 @@ The website is a single-serving site (SSS). My final design is simple and priori
 
 - As a user/player, I would like to see the title of the application at the top of the display.
 - As a user/player, I would like to be able to view game play instructions without having to open another tab/follow a link.
-- As a user/plater, I would like to be able to easily exit these instructions and return to the game play.
-- As a user/player, I would like to toggle the playback of the music and sound effects.
+- As a user/player, I would like to be able to easily exit these instructions and return to the game play.
+- As a user/player, I would like to toggle the playback of the music on and off.
 - As a user/player, I would like the option of resetting the game at any point.
 - As a user/player, I would like feedback on my recent play (whether I scored a point or not).
 - As a user/player, I would like an ongoing update of my score.
 - As a user/player, I would like to settings and control buttons to be easily visible and identifiable.
+- 
 
 ### **Wireframe**
 
