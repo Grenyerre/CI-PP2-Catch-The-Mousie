@@ -5,7 +5,7 @@ To do this, they must predict from which hole a mouse will appear and direct the
 
 Project Aim: Construct an interactive front-end application which responds to the user's actions. The site will alter the information it displays depending on the user's actions.
 
-![Am I Responsive graphic](./assets/AmIResponsive_GameScreen.png).
+![Am I Responsive graphic](./assets/amiresponsive_game_screen.png).
 
 [Live link to website](https://Grenyerre.github.io/catch-the-mousie!/)
 
