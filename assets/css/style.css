@@ -4,7 +4,7 @@ body {
     font-family: Englebert, sans-serif;
     background-color: #d467f0;
     text-align: center;
-    font-size: 100%;
+    font-size: 150%;
 }
 
 h1 {
@@ -16,18 +16,23 @@ h1 {
     text-shadow: 3px 3px #482352;
 }
 
-#welcome-area {
-    color: #ffffff;
-    background-color: #482352;
-    padding: 30px;
-    border-radius: 0 50px 0 50px;
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+#welcome-image-instructions {
+    color: #000;
+    font-size: 1.5em;
+    padding: 20px;
+    z-index: 1;
 }
 
 #game-image-area,
 #welcome-image-area {
     background-color: #fff;
     display: inline-block;
-    width: 70%;
+    width: 80%;
     border: 3px solid;
     text-decoration: none;
 }
@@ -35,20 +40,19 @@ h1 {
 #game-image,
 #welcome-image {
     width: 100%;
-    /* Suggested by stack overflow to centralze the image */
+    /* Suggested by stack overflow to centralize the image */
     margin: 0 auto;
 }
 
-.active {
+.play-game-button {
     width: 20vw;
-    text-decoration: none;
     font-size: 3em;
     font-weight: bold;
     text-align: center;
-    margin: auto;
+    margin: 50px auto 250px;
     padding: 10px;
     background-color: #fff;
-    border: 3px solid;
+    border: 3px solid #482352;
     border-radius: 0 10px 0 10px;
     box-shadow: 5px 5px 5px black;
 }
@@ -114,13 +118,13 @@ h1 {
     font-size: 1em;
     font-weight: bold;
     text-align: center;
-    width: 75px;
+    width: 100px;
     padding: 10px;
     background-color: #6c357a;
-    border-top-left-radius: 30px 22px;
-    border-top-right-radius: 30px 22px;
-    border-bottom-left-radius: 30px 22px;
-    border-bottom-right-radius: 30px 22px;
+    border-top-left-radius: 50px 25px;
+    border-top-right-radius: 50px 25px;
+    border-bottom-left-radius: 50px 25px;
+    border-bottom-right-radius: 50px 25px;
     color: #fff;
 }
 
