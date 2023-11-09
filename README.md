@@ -49,7 +49,7 @@ The font is taken from [Google Fonts](https://fonts.google.com/). It is called E
 ### **Favicon**
 
 The favicon was created using [favicon.io](https://favicon.io/favicon-converter/).
-I used the image of the cat from the application's landing screen.
+I used the image of the game's protagonist.
 
 ### **Settings Buttons**
 
