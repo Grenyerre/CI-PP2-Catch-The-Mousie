@@ -23,7 +23,7 @@ The website is a single-serving site (SSS). My final design is simple and priori
 - As a user/player, I would like feedback on my recent play (whether I scored a point or not).
 - As a user/player, I would like an ongoing update of my score.
 - As a user/player, I would like to settings and control buttons to be easily visible and identifiable.
-- 
+- As a user/player, I would like to know the name of the cat.
 
 ### **Wireframe**
 
