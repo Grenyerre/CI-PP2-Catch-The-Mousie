@@ -11,7 +11,7 @@ Project Aim: Construct an interactive front-end application which responds to th
 
 ## **User Experience (UX) & Design**
 
-The website is a single-serving site (SSS). My final design is simple and prioritizes the game play area. Neither the setting or control buttons interfere with the game play area.
+The website was initially a single-serving site (SSS), however I added a welcome screen to ensure the player had access to the instructions before gameplay began. My final design is simple and prioritizes the game play area. Neither the setting or control buttons interfere with the game play area.
 
 ### **User Stories**
 
@@ -42,7 +42,7 @@ As the images in the game play area are monochromatic, I wanted to utilize colou
 
 The font is taken from [Google Fonts](https://fonts.google.com/). It is called Englebert.
 
-![image of fonts.google.com Englebert font](./assets/englebert.png)
+![image of fonts.google.com Englebert font](./assets/images/englebert.png)
 
 ## **Features**
 
