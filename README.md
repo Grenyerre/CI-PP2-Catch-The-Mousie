@@ -7,7 +7,7 @@ Project Aim: Construct an interactive front-end application which responds to th
 
 ![Am I Responsive graphic](./assets/amiresponsive_game_screen.png).
 
-[Live link to website](https://Grenyerre.github.io/catch-the-mousie!/)
+[Live link to website](https://grenyerre.github.io/CI-PP2-Catch-The-Mousie/)
 
 ## **User Experience (UX) & Design**
 
@@ -55,11 +55,11 @@ I used the image of the game's protagonist.
 
 These are located at the top centre of the display. They allow the user to view the instructions, toggle the music on and off, and reset the game.
 
-- Upon clicking the 'INSTRUCTIONS' button, a modal appears containing written instructions of the game play. The modal can be closed by either clicking the close button, or by clicking anywhere outside of the modal.
+- Upon clicking the 'INSTRUCTIONS' button, a modal appears containing written instructions of the game play. The modal can be closed by clicking the close button.
 - Upon landing, the music is muted.
 - Upon clicking the 'RESTART GAME' button, the page will reload and all current score information will be lost.
 
-![image of the modal and its contents](./assets/images/ .png)
+![image of the modal and its contents](./assets/images/instructions_screenshot.png)
 
 ### **Game Play Area**
 
