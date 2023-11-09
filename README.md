@@ -5,7 +5,7 @@ To do this, they must predict from which hole a mouse will appear and direct the
 
 Project Aim: Construct an interactive front-end application which responds to the user's actions. The site will alter the information it displays depending on the user's actions.
 
-![Am I Responsive graphic]
+![Am I Responsive graphic](./assets/AmIResponsive_GameScreen.png).
 
 [Live link to website](https://Grenyerre.github.io/catch-the-mousie!/)
 
@@ -26,7 +26,7 @@ The website is a single-serving site (SSS). My final design is simple and priori
 
 ### **Wireframe**
 
-![image of Catch The Mousie! landing page](./assets/images/wireframe.png)
+![image of Catch The Mousie! game page](./assets/images/wireframe.png)
 
 The wireframe was created using Balsamiq.
 
