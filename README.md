@@ -42,7 +42,7 @@ As the images in the game play area are monochromatic, I wanted to utilize colou
 
 The font is taken from [Google Fonts](https://fonts.google.com/). It is called Englebert.
 
-![image of fonts.google.com Englebert font](./assets/images/englebert.png)
+![image of fonts.google.com Englebert font](./assets/englebert.png)
 
 ## **Features**
 
