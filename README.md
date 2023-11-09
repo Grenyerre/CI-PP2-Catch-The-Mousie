@@ -123,21 +123,35 @@ Below is a list of the software/applications used in the construction of this pr
 
 Once deployed, I tested the site using the following browsers; Google Chrome, Mozilla Firefox, Microsoft Edge, and Opera Software's Opera. Each browser loaded successfully and no issues were detected.
 
+Google Chrome
 ![screenshot of site running on Google Chrome](./assets/images/chrome_screenshot.png)
 
+Mozilla Firefox
 ![screenshot of site running on Mozilla Firefox](./assets/images/firefox_screenshot.png)
 
+Microsoft Edge
 ![screenshot of site running on Microsoft Edge](./assets/images/edge_screenshot.png)
 
+Opera Software Opera
 ![screenshot of site running on Opera](./assets/images/opera_screenshot.png)
 
 ### Software Validation Testing
 
+The warnings issued on the HTML documents seem to be an aftereffect of Codeanywhere's IDE. I have attempted to remove the unnecessary slashes however they always return once reloaded.
+
+index.html
 ![screenshot of w3c validator index.html](./assets/images/validator_index.html_screenshot.png)
 
+"Section lacks heading" - I have been informed by my peers that it is best practice to use sections in this case.
+"Empty heading" - I have been informed that the HTML still passes validation however it is is slight misuse of semantics.
+game.html
 ![screenshot of w3c validator game.html](./assets/images/validator_game.html_screenshot.png)
 
+style.css
 ![screenshot of w3c validator css](./assets/images/validator_css_screenshot.png)
+
+Google Chrome DevTools Lighthouse
+![screenshot of lighthouse validation](./assets/images/lighthouse_screenshot.png)
 
 ## **Debugging**
 
