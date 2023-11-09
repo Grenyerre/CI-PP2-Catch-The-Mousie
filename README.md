@@ -53,11 +53,11 @@ I used the image of the game's protagonist.
 
 ### **Settings Buttons**
 
-These are located at the top centre of the display. They allow the user to view the instructions, toggle the music and effects on and off, and reset the game.
+These are located at the top centre of the display. They allow the user to view the instructions, toggle the music on and off, and reset the game.
 
-- Upon clicking the 'INSTRUCTIONS' button, a modal appears containing written instructions of the game play. The modal can be closed by either clicking the close button, labelled 'It's time to eat!', or by clicking anywhere outside of the modal.
-- Upon landing, the music and effects are muted.
-- Upon clicking the 'RESET' button, the page will reload and all current score information will be lost.
+- Upon clicking the 'INSTRUCTIONS' button, a modal appears containing written instructions of the game play. The modal can be closed by either clicking the close button, or by clicking anywhere outside of the modal.
+- Upon landing, the music is muted.
+- Upon clicking the 'RESTART GAME' button, the page will reload and all current score information will be lost.
 
 ![image of the modal and its contents](./assets/images/ .png)
 
