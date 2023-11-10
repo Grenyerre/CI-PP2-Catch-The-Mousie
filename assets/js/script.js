@@ -102,14 +102,14 @@ function checkResult(catDirection, mouseLocation) {
 
     if (catDirection === mouseLocation) {
         eaten++;
-        outcome = `You pounced ${catDirection} and the mouse chose ${mouseLocation}. Yum yum!`;
+        outcome = `You pounced to the ${catDirection} and the mouse chose ${mouseLocation}. Yum yum!`;
         gameState.innerHTML = outcome;
         playerScore.innerHTML = eaten;
         purr.loop = false;
         purr.play();
     } else if (catDirection !== mouseLocation) {
         escaped++;
-        outcome = `You pounced ${catDirection} and mouse chose ${mouseLocation}. Better luck next time!`;
+        outcome = `You pounced to the ${catDirection} and mouse chose ${mouseLocation}. Better luck next time!`;
         gameState.innerHTML = outcome;
         computerScore.innerHTML = escaped;
         meow.loop = false;
