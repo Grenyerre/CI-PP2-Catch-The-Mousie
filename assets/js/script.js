@@ -123,7 +123,7 @@ function checkResult(catDirection, mouseLocation) {
 function checkGameEnd() {
 
     if (escaped == 5 && eaten == 0 || escaped == 4 && eaten == 1) {
-        finalMessage.innerHTML = `Never mind, ${catName} is still hungry, more mice needed!.`;
+        finalMessage.innerHTML = `Never mind, ${catName} is still hungry. More mice needed!.`;
         imageSrc = "assets/images/cat_still_hungry.png";
         gameImage.src = imageSrc;
         endGame();
