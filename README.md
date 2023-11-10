@@ -146,12 +146,17 @@ index.html
 
 "Section lacks heading" - I have been informed by my peers that it is best practice to use sections in this case.
 "Empty heading" - I have been informed that the HTML still passes validation however it is is slight misuse of semantics.
+
 game.html
 ![screenshot of w3c validator game.html](./assets/images/validator_game.html_screenshot.png)
 
 style.css
 ![screenshot of w3c validator css](./assets/images/validator_css_screenshot.png)
 
+I have carried out some research into the 'Best Practices' issue that reduced the score to 95%. I discussed this research with my mentor and it was decided to focus on other issues due to the time restrains. I will investigate further when time allows.
+
+I am unhappy with the 'Performance' score. When time allows, I will alter the image sizes to see if that increases the performance but doesn't distract from the gameplay.
+ 
 Google Chrome DevTools Lighthouse
 ![screenshot of lighthouse validation](./assets/images/lighthouse_screenshot.png)
 
