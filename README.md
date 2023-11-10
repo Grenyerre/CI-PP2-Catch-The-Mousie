@@ -179,11 +179,21 @@ I am unhappy with the 'Performance' score. When time allows, I will alter the im
 Google Chrome DevTools Lighthouse
 ![screenshot of lighthouse validation](./assets/images/lighthouse_screenshot.png)
 
+Accessibility check: wave.webaim.com
+
+index.html
+
+![screenshot of wave.webaim.com validation of index.html](./assets/images/webaim_index.html_screenshot.png)
+
+game.html
+
+![screenshot of wave.webaim.com validation of game.html](./assets/images/webaim_game.html_screenshot.png)
+
 ## **Debugging**
 
 1. Functions
    I amended each function to include a console.log message so that I could tell whether it was being called and under which circumstances this was happening. This helped me to remove a function that had become nested and subsequently was never called.
-   
+
 2. Naming
    I like to be clear when I name variables, functions, etc. I find it makes the code easier to follow for myself and other users. However switching between HTML and CSS, and JavaScript led to issues rrying to use the smae names but only changing the style of the text, eg. cat-name in HTML/CSS became catName in JavaScript. Hence I had to rename variables similarly.
 
@@ -201,7 +211,7 @@ The site was deployed to GitHub pages.
 
 - I would like to credit a Code Institute alumni, Adam Gilroy, with the game layout upon which 'Catch The Mousie!' is based.
 - I visited w3schools.com numerous times during this project's inception. The code for the modal is based upon this page; [w3schools css modal how to](https://w3schools.com/howto/howto_css_modals.asp/).
--
+- I also visited 'Stack Overflow', w3docs.com, and developer.mozilla.org to check syntaxes and correct usage.
 
 ## **Acknowledgements**
 
