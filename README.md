@@ -22,7 +22,7 @@ The website was initially a single-serving site (SSS), however I added a welcome
 - As a user/player, I would like the option of resetting the game at any point.
 - As a user/player, I would like feedback on my recent play (whether I scored a point or not).
 - As a user/player, I would like an ongoing update of my score.
-- As a user/player, I would like to settings and control buttons to be easily visible and identifiable.
+- As a user/player, I would like the settings and control buttons to be easily visible and identifiable.
 - As a user/player, I would like to know the name of the cat.
 
 ### **Wireframe**
@@ -42,12 +42,12 @@ Once the 'Play Game' button on the 'Welcome' page has been clicked, the 'Game' p
   - If you have selected the correct hole, the image will display the cat holding the mouse by its tail.
   - Otherwise, the image will display the cat pouncing towards the chosen hole and the mouse escaping from another hole.
 - The message in the 'Game State' area and the score will also change. It will state which hole both you and the mouse chose.
-  - If you selected the correct hole, 'Yum yum!' is diplayed and 'Eaten' increases by 1.
+  - If you selected the correct hole, 'Yum yum!' is displayed and 'Eaten' increases by 1.
   - Otherwise, 'Better luck next time.' is diplayed and 'Escaped' increases by 1.
--The game ends when 'Eaten' + 'Escaped' = 5. The image and 'Game State' message also change.
-  - If 'Eaten' is 0 or 1, the image displays a hungry cat and the message states, 'Never mind, 'catname' is still h\ungry. More mice needed.'.
-  - If 'Eaten' is 2 or 3, the image diplays a cat washing itself and the message states, 'Good attempt! 'catname' is almost full.'.
-  - If 'Eagten' is 4 or 5, the image displays ac at with a mouse in its mouth and the message states, 'Well done! 'catname' has achieved satiety.'.
+    -The game ends when 'Eaten' + 'Escaped' = 5. The image and 'Game State' message also change.
+  - If 'Eaten' is 0 or 1, the image displays a hungry cat and the message states, 'Never mind, 'catname' is still hungry. More mice needed.'.
+  - If 'Eaten' is 2 or 3, the image displays a cat washing itself and the message states, 'Good attempt! 'catname' is almost full.'.
+  - If 'Eaten' is 4 or 5, the image displays a cat with a mouse in its mouth and the message states, 'Well done! 'catname' has achieved satiety.'.
   - In each of the above scenarios, 'To play again, please press the 'Restart Button', is shown below the messages.
 
 ### **Colour Choice**
@@ -68,15 +68,15 @@ The font is taken from [Google Fonts](https://fonts.google.com/). It is called E
 ### **Favicon**
 
 The favicon was created using [favicon.io](https://favicon.io/favicon-converter/).
-I used the image of the game's protagonist.
+I used an image of the game's protagonist.
 
 ### **Settings Buttons**
 
-These are located at the top centre of the display. They allow the user to view the instructions, toggle the music on and off, and reset the game.
+These are located at the top centre of the display. They allow the user to view the instructions, toggle the music on and off, and restart the game.
 
-- Upon clicking the 'INSTRUCTIONS' button, a modal appears containing written instructions of the game play. The modal can be closed by clicking the close button.
-- Upon landing, the music is muted.
-- Upon clicking the 'RESTART GAME' button, the page will reload and all current score information will be lost.
+- Upon clicking the 'Instructions' button, a modal appears containing written instructions of the game play. The modal can be closed by clicking the close button.
+- Upon landing, the music is muted. The music can be toggled on or off by clicking this button.
+- Upon clicking the 'Restart Game' button, the page will reload and all current score information will be lost.
 
 ![image of the modal and its contents](./assets/images/instructions_screenshot.png)
 
@@ -86,7 +86,7 @@ This is the largest section of the page and displays the images of the game's pr
 
 ### **Control Buttons**
 
-These allow the player to input their choice of which hole they believe the mouse will appear; left, centre, or right.
+These allow the player to input their choice from which hole they believe the mouse will appear; left, centre, or right.
 
 ### **Score Area**
 
@@ -104,7 +104,7 @@ Contains information regarding the copyright owner of the images and music used 
 
 - Increase the number of holes from which the mouse can escape to five. Probability: 70%.
 - To separate the music and sound effects so that they can be toggled on/off independently. Probability: 50%.
-- Alter the game graphics to allow the user to choose the cat's colouring; black, tortoiseshell, ginger, grey. Probability: 10%.
+- Alter the game graphics to allow the user to choose the cat's colouring; black, tortoiseshell, ginger, grey, etc. Probability: 10%.
 - To include a high score table to record the highest scores, the date and the player name. Probability: 10%.
 
 ## **Software Used**
@@ -127,7 +127,7 @@ Below is a list of the software/applications used in the construction of this pr
   - Used to validate the project's HTML code.
 - [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/)
   - Used to validate the project's CSS code.
-- [JSHint](https:..jshint.com/)
+- [JSHint](https://jshint.com/)
   - Used to validate the project's JavaScript code.
 - [MicroSoft Paint](https://microsoft.com > en-us > windows > paint)
   - Used to create the game's images.
@@ -195,7 +195,7 @@ game.html
    I amended each function to include a console.log message so that I could tell whether it was being called and under which circumstances this was happening. This helped me to remove a function that had become nested and subsequently was never called.
 
 2. Naming
-   I like to be clear when I name variables, functions, etc. I find it makes the code easier to follow for myself and other users. However switching between HTML and CSS, and JavaScript led to issues rrying to use the smae names but only changing the style of the text, eg. cat-name in HTML/CSS became catName in JavaScript. Hence I had to rename variables similarly.
+   I like to be clear when I name variables, functions, etc. I find it makes the code easier to follow for myself and other users. However switching between HTML and CSS, and JavaScript led to issues trying to use the same names but only changing the style of the text, eg. cat-name in HTML/CSS became catName in JavaScript. Hence I had to rename variables similarly.
 
 3. Boolean logic
    An issue arose as I didn't state the logic and equalities for both 'Eaten' and 'Escaped' in my functions. This was rectified by explicitly completing the Boolean arguments.
@@ -210,7 +210,7 @@ The site was deployed to GitHub pages.
 ## **Credits**
 
 - I would like to credit a Code Institute alumni, Adam Gilroy, with the game layout upon which 'Catch The Mousie!' is based.
-- I visited w3schools.com numerous times during this project's inception. The code for the modal is based upon this page; [w3schools css modal how to](https://w3schools.com/howto/howto_css_modals.asp/).
+- I visited w3schools.com numerous times during this project's development. The code for the modal is based upon this page; [w3schools css modal how to](https://w3schools.com/howto/howto_css_modals.asp/).
 - I also visited 'Stack Overflow', w3docs.com, and developer.mozilla.org to check syntaxes and correct usage.
 
 ## **Acknowledgements**
