@@ -181,6 +181,18 @@ Google Chrome DevTools Lighthouse
 
 ## **Debugging**
 
+1. Functions
+   I amended each function to include a console.log message so that I could tell whether it was being called and under which circumstances this was happening. This helped me to remove a function that had become nested and subsequently was never called.
+   
+2. Naming
+   I like to be clear when I name variables, functions, etc. I find it makes the code easier to follow for myself and other users. However switching between HTML and CSS, and JavaScript led to issues rrying to use the smae names but only changing the style of the text, eg. cat-name in HTML/CSS became catName in JavaScript. Hence I had to rename variables similarly.
+
+3. Boolean logic
+   An issue arose as I didn't state the logic and equalities for both 'Eaten' and 'Escaped' in my functions. This was rectified by explicitly completing the Boolean arguments.
+
+4. If Else statements
+   Issues arose as I initially relied on an 'else' declaration, instead of explicitly stating each outcome.
+
 ## **Deployment**
 
 The site was deployed to GitHub pages.
