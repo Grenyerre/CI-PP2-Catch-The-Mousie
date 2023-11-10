@@ -31,6 +31,25 @@ The website was initially a single-serving site (SSS), however I added a welcome
 
 The wireframe was created using Balsamiq.
 
+### **Gameplay**
+
+Once the 'Play Game' button on the 'Welcome' page has been clicked, the 'Game' page is displayed and gameplay can commence.
+
+- Displayed on the screen are three holes infront of a hungry cat.
+- The aim of the game is to predict from which hole a mouse will appear and direct the cat to the hole, so that it can eat the escaping mouse.
+- You do this by selecting one of the holes by clicking a control button, marked 'LEFT', 'CENTRE', or 'RIGHT'.
+- The image will now change.
+  - If you have selected the correct hole, the image will display the cat holding the mouse by its tail.
+  - Otherwise, the image will display the cat pouncing towards the chosen hole and the mouse escaping from another hole.
+- The message in the 'Game State' area and the score will also change. It will state which hole both you and the mouse chose.
+  - If you selected the correct hole, 'Yum yum!' is diplayed and 'Eaten' increases by 1.
+  - Otherwise, 'Better luck next time.' is diplayed and 'Escaped' increases by 1.
+-The game ends when 'Eaten' + 'Escaped' = 5. The image and 'Game State' message also change.
+  - If 'Eaten' is 0 or 1, the image displays a hungry cat and the message states, 'Never mind, 'catname' is still h\ungry. More mice needed.'.
+  - If 'Eaten' is 2 or 3, the image diplays a cat washing itself and the message states, 'Good attempt! 'catname' is almost full.'.
+  - If 'Eagten' is 4 or 5, the image displays ac at with a mouse in its mouth and the message states, 'Well done! 'catname' has achieved satiety.'.
+  - In each of the above scenarios, 'To play again, please press the 'Restart Button', is shown below the messages.
+
 ### **Colour Choice**
 
 The colour palette was created using [color.adobe.com](https://color.adobe.com/create/color-wheel).
@@ -156,7 +175,7 @@ style.css
 I have carried out some research into the 'Best Practices' issue that reduced the score to 95%. I discussed this research with my mentor and it was decided to focus on other issues due to the time restrains. I will investigate further when time allows.
 
 I am unhappy with the 'Performance' score. When time allows, I will alter the image sizes to see if that increases the performance but doesn't distract from the gameplay.
- 
+
 Google Chrome DevTools Lighthouse
 ![screenshot of lighthouse validation](./assets/images/lighthouse_screenshot.png)
 
