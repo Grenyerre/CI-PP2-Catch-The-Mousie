@@ -73,9 +73,9 @@ These allow the player to input their choice of which hole they believe the mous
 
 Here is displayed in numbers how many mice have been caught (eaten!) and how many have escaped.
 
-### **Game Prompt Area**
+### **Game State Area**
 
-Messages are displayed here to inform the player of the required action, the result of their actions, and the final ccore messages.
+Messages are displayed here to inform the player of the required action, the result of their actions, and the final score messages.
 
 ### **Footer**
 
@@ -118,6 +118,8 @@ Below is a list of the software/applications used in the construction of this pr
   - Used to create an image of the various display sizes of the site.
 
 ## **Testing**
+
+![screenshot of MS Excel testing document](./assets/images/excel_testing_screenshot.png)
 
 ### Alternative Browsers
 
